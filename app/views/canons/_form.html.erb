@@ -1,0 +1,11 @@
+<div id='canon'>
+  <%= form_for(@canon) do |f| %>
+
+    <div class="field">
+      <%= f.text_area :body %>
+    </div>
+    <div class="actions">
+      <%= f.submit value: 'Submit' %>
+    </div>
+  <% end %>
+</div>

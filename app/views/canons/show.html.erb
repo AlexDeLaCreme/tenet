@@ -1,0 +1,10 @@
+<p id='canon'>
+  <%= @canon.body %>
+</p>
+
+<%= link_to 'Edit', edit_canon_path(@canon), id: 'edit-btn' %>
+<%= link_to 'Archive', archive_path(@canon), id: 'archive-btn' %>
+<%= link_to 'Next', random_path, id: 'next-btn' %>
+<%= link_to 'Add New', new_canon_path, id: 'add-new-btn' %>
+<%= link_to 'Destroy', @canon, method: :delete, data: { confirm: 'Are you sure?' }, id: 'delete-btn' %>
+

@@ -1,0 +1,107 @@
+// Place all the styles related to the canons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin shadow {
+  -webkit-box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    3px 3px 5px rgba(50, 50, 50, 0.75);
+  box-shadow:         3px 3px 5px rgba(50, 50, 50, 0.75);
+}
+
+#canon {
+  margin: 20px;
+
+  border: solid 1px #999;
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+
+  @include shadow;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  font-size: 40pt;
+  line-height: 40pt;
+  color: #333;
+  text-shadow: 1px 1px 2px #666;
+
+  padding: 40px;
+
+  /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
+
+  /* IE10 Consumer Preview */
+  background-image: -ms-linear-gradient(top left, #75E3FF 0%, #EF97CF 100%);
+
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top left, #75E3FF 0%, #EF97CF 100%);
+
+  /* Opera */
+  background-image: -o-linear-gradient(top left, #75E3FF 0%, #EF97CF 100%);
+
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #75E3FF), color-stop(1, #EF97CF));
+
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top left, #75E3FF 0%, #EF97CF 100%);
+
+  /* W3C Markup, IE10 Release Preview */
+  background-image: linear-gradient(to bottom right, #75E3FF 0%, #EF97CF 100%);
+
+  textarea {
+    padding: 10px;
+    width: 580px;
+    height: 240px;
+  }
+
+  input[type=submit] {
+    font-size: 20pt;
+  }
+}
+
+#add-new-btn, #back-btn {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+
+  @include shadow;
+}
+
+#delete-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+  @include shadow;
+}
+
+#next-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -20px;
+
+  @include shadow;
+}
+
+#archive-btn {
+  float: right;
+  margin-right: 22px;
+
+  @include shadow;
+}
+
+#edit-btn {
+  margin-left: 22px;
+
+  @include shadow;
+}
+
+#show-btn {
+  margin-left: 22px;
+}
+
+.btn {
+  margin-left: 3px;
+  @include shadow;
+}
