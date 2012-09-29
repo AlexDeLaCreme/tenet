@@ -1,0 +1,28 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+
+goto = (path) ->
+  switch path
+    when 'next' then window.location = $('#next-btn').attr('href')
+    when 'edit' then window.location = $('#edit-btn').attr('href')
+    when 'archive' then window.location = $('#archive-btn').attr('href')
+    when 'add new' then window.location = $('#add-new-btn').attr('href')
+    when 'categories' then window.location = '/categories'
+    when 'index' then window.location = '/canons'
+    when 'destroy' then $('#delete-btn').click()
+
+$ ->
+  $('body').keydown( (e) ->
+    # console.log(e)
+    # console.log(e.keyCode)
+
+    switch e.keyCode
+      when 39, 32, 13, 78 then goto 'next' # n, ->, Enter, Space
+      when 65 then goto 'add new' # a
+      when 68 then goto 'destroy' # d
+      when 69 then goto 'edit' # e
+      when 82 then goto 'archive' # r
+      when 67 then goto 'categories' if e.ctrlKey is true # Ctrl + c
+      when 73 then goto 'index' if e.ctrlKey is true # Ctrl + i
+  )
