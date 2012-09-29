@@ -4,6 +4,9 @@
     <div class="field">
       <%= f.text_area :body %>
     </div>
+    <div class='field'>
+      <%= f.select :category_id, Category.all.collect {|c| [c.name, c.id] } %>
+    </div>
     <div class="actions">
       <%= f.submit value: 'Submit' %>
     </div>

@@ -69,8 +69,18 @@ class CanonsController < ApplicationController
   # PUT /canons/1.json
   def update
     @canon = Canon.find(params[:id])
+    # body = params[:canon][:body]
+    # category_id = params[:canon][:category]
 
     respond_to do |format|
+      # @canon.body = body
+      # if category_id.nil?
+      #   @canon.category = nil
+      # else
+      #   @canon.category = Category.find(category_id)
+      # end
+
+      # if @canon.save
       if @canon.update_attributes(params[:canon])
         format.html { redirect_to @canon, notice: 'Canon was successfully updated.' }
         format.json { head :no_content }

@@ -1,5 +1,6 @@
 Tenet::Application.routes.draw do
   resources :canons
+  resources :categories
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
